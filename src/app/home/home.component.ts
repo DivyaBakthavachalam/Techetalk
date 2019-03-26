@@ -8,14 +8,11 @@ import { User } from '../user';
   styleUrls: ['../app.component.scss']
 })
 export class HomeComponent implements OnInit {
-  users: User[];
+  public users = [];
   constructor(private _data: DataService) { }
 
   ngOnInit() {
-    this._data.getUsers()
-      .subscribe( data => {
-        this.users = data;
-      });
+this._data.getUsers().subscribe(data => this.users = data);
   }
 
  
