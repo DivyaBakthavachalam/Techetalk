@@ -16,7 +16,7 @@
     </ul>
   </div>
 </nav>
-    <div class="container">
+  <!--  <div class="container">
       <div class="card p-1" *ngFor="let user of users">
         <div class="row">
           <div class="col">
@@ -56,4 +56,9 @@
             </div>
   </div>
   </div>
-  </div>
+  </div> -->
+
+  <ul *ngFor="let user of users">
+      <li>{{user.name}}</li>
+      <li>{{user.creationDate}}</li>
+  </ul>
